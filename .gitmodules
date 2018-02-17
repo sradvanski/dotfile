@@ -7,9 +7,6 @@
 [submodule "@vendor/bash-it"]
 	path = @vendor/bash-it
 	url = https://github.com/Bash-it/bash-it.git
-[submodule "@vendor/tmux"]
-	path = @vendor/tmux
-	url = git@github.com:gpakosz/.tmux.git
 [submodule "@vendor/vim"]
 	path = @vendor/vim
 	url = https://github.com/amix/vimrc.git
