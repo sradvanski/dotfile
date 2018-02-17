@@ -16,3 +16,6 @@
 [submodule "@vendor/tpm"]
 	path = @vendor/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "@vendor/tmux"]
+	path = @vendor/tmux
+	url = https://github.com/gpakosz/.tmux.git
