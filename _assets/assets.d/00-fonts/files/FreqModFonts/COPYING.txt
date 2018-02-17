@@ -1,0 +1,49 @@
+For derived works please use the FreqMod Artistic or FreqMod clear fonts, and then merge with fonts afterwards for simpler licensing,
+then you only have to care about the SIL OFL (which i prefer).
+
+If some of the authors of the works which i have derived think i have misunderstood their licenses and licensed their fonts in a wrong way, please
+contact me and I will stop using the work, and try to find a solution.
+
+------------------------------------------------------------------------------------------------------------------------
+
+FreqMod Artistic & FreqMod Clear license  (see the "FreqMod Artistic & FreqMod Clear license " file for all information (and the legal text)):
+Copyright (c) 2006, Frederik M.J.V. All Rights Reserved.
+
+Licensed under ARPHIC public license, when part of (or derived from) FreqModClue,
+else licensed under SIL OFL.
+
+------------------------------------------------------------------------------------------------------------------------
+
+FreqMod Clue license (see the "FreqMod Clue license" file for all information (and the legal text)):
+Copyright (c) 2006, Frederik M.J.V. All Rights Reserved.
+Copyright (C) 1994-1999, Arphic Technology Co., Ltd.
+Copyright (C) 1999-2004, Firefly and Arphic Technology Co., Ltd.
+Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.
+Copyright (c) 2006 by Tavmjong Bah. All Rights Reserved. 
+Copyright (c) 2004 by Wadalab.
+DejaVu changes are in public domain
+
+Glyph parts, license types:
+Bitstream Vera Latin: (BSD like)
+Arev fonts extening latin: (BSD like).
+(DejaVu extended latin: public domain)
+FreqMod Clear: (Arphic/SIL OFL)
+Wadalab CJK: (BSD like)
+Arphic CJK: (Arphic)
+Firefly CJK: (Arphic)
+
+------------------------------------------------------------------------------------------------------------------------
+
+FreqMod Dart & FreqMod Clear license (see the "FreqMod Dart & FreqMod Clear license" file for all information (and the legal text)):
+Copyright (c) 2006, Frederik M.J.V. All Rights Reserved.
+Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.
+Copyright (c) 2006 by Tavmjong Bah. All Rights Reserved. 
+DejaVu changes are in public domain
+
+Glyph parts, license types:
+Bitstream Vera Latin: (BSD like)
+Arev fonts extening latin: (BSD like).
+(DejaVu extended latin: public domain)
+FreqMod Clear: (Arphic/SIL OFL)
+
+

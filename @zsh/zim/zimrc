@@ -1,0 +1,75 @@
+# -*- mode: sh; -*-
+#
+# ==============================================================================
+#
+# Purpose:           zim setup
+#
+# Parameters:        (none) ;
+#                    -----------------------------------------------------------
+#                    (none) ;
+#                    -----------------------------------------------------------
+# Called From:       (script) executable
+#
+# Author:            Samir Radvanski <samir.radvanski@gmail.com>
+#
+# Notes:             Script used to ensure configuration of zim framework
+#
+# Revision:          Last change: 06/2017 by SR :: Added initial configuration
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+#
+# Refer this documents to understand some of configurations
+#
+# @See: http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html#Simple-Prompt-Escapes
+# @See: http://zsh.sourceforge.net/Doc/Release/Options.html#Input_002fOutput
+# @See: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters.md
+# ------------------------------------------------------------------------------
+
+# ==============================================================================
+# CORE SETTINGS
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Zim settings
+# ------------------------------------------------------------------------------
+
+# @const function[] zmodules - modules list
+zmodules=(directory
+          autosuggestions \
+          environment \
+          git \
+          git-info \
+          history \
+          input \
+          utility \
+          syntax-highlighting \
+          history-substring-search
+          prompt \
+          completion)
+
+
+# ==============================================================================
+# MODULE SETTINGS
+# ==============================================================================
+
+# @const string zprompt_theme - prompt theme
+# @const string zcompdump_file - completions
+# @const string ztermtitle - terminal title
+# @const string zdouble_dot_expand - expand doubledot
+# @const function[] zhighlighters - syntax higlighters
+zprompt_theme='powerlevel9k'
+zcompdump_file=".zcompdump-${HOST}-${ZSH_VERSION}"
+ztermtitle='%n'
+zdouble_dot_expand='true'
+zhighlighters=(main brackets)
+
+# readonly zssh_ids=(id_rsa)
+# readonly zpacman_frontend='powerpill'
+# readonly zpacman_helper=(aur)
+
+# ------------------------------------------------------------------------------
+# OPTIONS
+# ------------------------------------------------------------------------------
+setopt CORRECT

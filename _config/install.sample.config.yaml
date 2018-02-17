@@ -1,0 +1,103 @@
+# ##############################################################################
+# DEFAULTS
+# ##############################################################################
+#
+# Setup some sane defaults
+- defaults:
+
+    shell:
+      stdin: true
+      stdout: true
+
+    link:
+      create: true
+      relink: true
+      force: true
+
+# ##############################################################################
+# CLEANUP DIRECTORY
+# ##############################################################################
+- clean: [ '~' ]
+
+# ##############################################################################
+# SHELL EXECUTION
+# ##############################################################################
+- shell:
+
+    -
+      command: "/bin/bash ~/.dotfiles/_internal/helpers/install.sh"
+
+    -
+      command: "/bin/bash ~/.dotfiles/_internal/tools/setup.sh"
+
+    -
+      command: "/bin/bash ~/.dotfiles/_assets/setup.sh"
+
+    -
+      command: "/bin/bash ~/.dotfiles/_internal/mods/mods.sh"
+
+    -
+      command: "rm -rf ~/.hushlogin && touch ~/.hushlogin"
+
+    -
+      command: "zsh ~/.dotfiles/_internal/install/install.sh" 
+
+# ##############################################################################
+# LINKING
+# ##############################################################################
+#
+# Link all of our application settings that we want to expose
+# in our home directory
+- link:
+
+    # ##########################################################################
+    # GIT Config
+    # ##########################################################################
+    ~/.gitconfig:
+        path: '~/.dotfiles/@symlink/git/gitconfig'
+
+    # ##########################################################################
+    # ZSH
+    # ##########################################################################
+    ~/.zshrc:
+        path: '~/.dotfiles/@zsh/zim/zshrc'
+
+    ~/.zimrc:
+        path: '~/.dotfiles/@zsh/zim/zimrc'
+
+    ~/.zlogin:
+        path: '~/.dotfiles/@vendor/zim/templates/zlogin'
+
+    # ##########################################################################
+    # BASH
+    # ##########################################################################
+    ~/.bash_logout:
+        path: '~/.dotfiles/@bash/bash_logout'
+
+    ~/.profile:
+        path: '~/.dotfiles/@bash/profile'
+
+    ~/.bashrc:
+        path: '~/.dotfiles/@bash/bashrc'
+
+    # ##########################################################################
+    # tmux configuration
+    # ##########################################################################
+    ~/.tmux.conf:
+        path: '~/.dotfiles/@vendor/tmux/.tmux.conf'
+
+    ~/.tmux.conf.local:
+        path: '~/.dotfiles/@symlink/tmx/tmux.conf.local'
+
+    # ##########################################################################
+    # editor configuration
+    # ##########################################################################
+    ~/.vim_runtime:
+        path: '~/.dotfiles/@vendor/vim/'
+
+    ~/.vim_runtime/configs.vim:
+        path: '~/.dotfiles/@symlink/vim/configs.vim'
+
+    ~/.vimrc:
+        path: '~/.dotfiles/@symlink/vim/vimrc'
+

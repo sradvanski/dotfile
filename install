@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+# -*- Mode: sh -*-
+# vi: set ft=sh :
+#
+# ==============================================================================
+#
+# Purpose:           Setup dotfiles
+#
+# Parameters:        (none) ;
+#                    -----------------------------------------------------------
+#                    (none) ;
+#                    -----------------------------------------------------------
+#
+# Called From:       (script) executable
+#
+# Author:            Samir Radvanski <samir.radvanski@365squared.com>
+#
+# Notes:             Script used to setup our dotfiles so that we have
+#                    required development tools in our environment
+#
+# Revision:          Last change: 06/2017 by SR :: dot files setup
+#
+# ==============================================================================
+set -o errexit
+set -o nounset
+set -o pipefail
+set -e
+
+# ==============================================================================
+# VARIABLES SETUP
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# VARIABLES LOADING
+# ------------------------------------------------------------------------------
+source ${HOME}/.dotfiles/_internal/variables/variables.sh
+
+# ------------------------------------------------------------------------------
+# VARIABLES DEFINITIONS
+# ------------------------------------------------------------------------------
+
+# @var string CONFIG - config path
+# @var string DOTBOT_DIR - source directory of dotbot
+# @var string DOTBOT_BIN - dotbot executable
+CONFIG="${DOT_DOTFILES}/_config/install.config.yaml"
+DOTBOT_DIR="${DOT_DOTFILES}/@vendor/dotbot"
+DOTBOT_BIN="${DOTBOT_DIR}/bin/dotbot"
+
+# ==============================================================================
+# EXECUTION
+# ==============================================================================
+if [[ -d ${DOTBOT_DIR} ]]; then
+
+    # --------------------------------------------------------------------------
+    # UPDATE MODULES
+    # --------------------------------------------------------------------------
+    cd "${DOT_DOTFILES}"
+
+    (git submodule update --init --recursive "${DOTBOT_DIR}")
+    (git submodule update --init --recursive "${DOT_DOTFILES}")
+
+    # --------------------------------------------------------------------------
+    # SETUP RUN
+    # --------------------------------------------------------------------------
+    "$DOTBOT_BIN" -d "${DOT_DOTFILES}/@vendor/dotbot" -c "$CONFIG" "${@}"
+
+fi
+
+# ------------------------------------------------------------------------------
+# VARIABLES UNLOADING
+# ------------------------------------------------------------------------------
+unset CONFIG
+unset DOTBOT_DIR
+unset DOTBOT_BIN
