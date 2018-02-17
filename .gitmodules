@@ -1,0 +1,21 @@
+[submodule "@vendor/dotbot"]
+	path = @vendor/dotbot
+	url = https://github.com/anishathalye/dotbot.git
+[submodule "@vendor/zim"]
+	path = @vendor/zim
+	url = https://github.com/zimfw/zimfw.git
+[submodule "@vendor/bash-it"]
+	path = @vendor/bash-it
+	url = https://github.com/Bash-it/bash-it.git
+[submodule "@vendor/tmux"]
+	path = @vendor/tmux
+	url = git@github.com:gpakosz/.tmux.git
+[submodule "@vendor/vim"]
+	path = @vendor/vim
+	url = https://github.com/amix/vimrc.git
+[submodule "@vendor/vundle"]
+	path = @vendor/vundle
+	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "@vendor/tpm"]
+	path = @vendor/tpm
+	url = https://github.com/tmux-plugins/tpm.git
