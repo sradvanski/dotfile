@@ -1,0 +1,18 @@
+[submodule "_vendor/tmux"]
+	path = _vendor/tmux
+	url = https://github.com/gpakosz/.tmux.git
+[submodule "_vendor/vim"]
+	path = _vendor/vim
+	url = https://github.com/amix/vimrc.git
+[submodule "_vendor/tpm"]
+	path = _vendor/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "_vendor/vundle"]
+	path = _vendor/vundle
+	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "_vendor/dotbot"]
+	path = _vendor/dotbot
+	url = https://github.com/anishathalye/dotbot.git
+[submodule "_vendor/zim"]
+	path = _vendor/zim
+	url = https://github.com/zimfw/zimfw.git
