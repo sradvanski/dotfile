@@ -42,10 +42,10 @@ if [[ $(command -v phpbrew) ]]; then
     # --------------------------------------------------------------------------
     # PHPBREW VARIABLES
     # --------------------------------------------------------------------------
-    set +a
-    PHPBREW_SET_PROMPT=1
-    PHPBREW_RC_ENABLE=1
-    set -a
+    #set +a
+    #PHPBREW_SET_PROMPT=1
+    #PHPBREW_RC_ENABLE=1
+    #set -a
 
     # --------------------------------------------------------------------------
     # PHPBREW CONFIG
