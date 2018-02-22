@@ -74,10 +74,11 @@ if [[ $(command -v git) ]]; then
     git clone --depth=1 ${PYENV_VIRTUAL_WRAPPER_REPO} \
         ${PYENV_PLUGINS}/pyenv-virtualenvwrapper
 
-    #chown -R ${VM_USER}:${VM_USER} ${PYENV_HOME}
-
 else
 
+    # --------------------------------------------------------------------------
+    # MESSAGE
+    # --------------------------------------------------------------------------
     echo "Install GIT on your system." >&2
     exit 1
 

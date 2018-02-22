@@ -64,7 +64,6 @@ if [[ $(command -v git) ]]; then
     git clone --depth=1 ${RBENV_BUILD_REPOSITORY} ${RBENV_PLUGINS}/ruby-build
     git clone --depth=1 ${RBENV_GEMSETS_REPOSIORY} ${RBENV_PLUGINS}/rbenv-gemset
 
-    #chown -R ${VM_USER}:${VM_USER} ${RBENV_DIR}
 else
     echo "Git command was not foudn on system." >&2
     exit 1

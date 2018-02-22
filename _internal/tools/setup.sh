@@ -39,7 +39,7 @@ set -e
 # ------------------------------------------------------------------------------
 
 # @var string CWD - current working directory
-CWD="$( cd "$(dirname "$(readlink -f $0)" )" && pwd -P )"
+CWD="$(cd "$(readlink -f $(dirname "$0") )" && pwd -P)"
 
 # ==============================================================================
 # EXECUTION

@@ -54,50 +54,50 @@
     # GIT Config
     # ##########################################################################
     ~/.gitconfig:
-        path: '~/.dotfiles/@symlink/git/gitconfig'
+        path: '~/.dotfiles/symlink/git/gitconfig'
 
     # ##########################################################################
     # ZSH
     # ##########################################################################
     ~/.zshrc:
-        path: '~/.dotfiles/@zsh/zim/zshrc'
+        path: '~/.dotfiles/zsh/zim/zshrc'
 
     ~/.zimrc:
-        path: '~/.dotfiles/@zsh/zim/zimrc'
+        path: '~/.dotfiles/zsh/zim/zimrc'
 
     ~/.zlogin:
-        path: '~/.dotfiles/@vendor/zim/templates/zlogin'
+        path: '~/.dotfiles/_vendor/zim/templates/zlogin'
 
     # ##########################################################################
     # BASH
     # ##########################################################################
     ~/.bash_logout:
-        path: '~/.dotfiles/@bash/bash_logout'
+        path: '~/.dotfiles/bash/bash_logout'
 
     ~/.profile:
-        path: '~/.dotfiles/@bash/profile'
+        path: '~/.dotfiles/bash/profile'
 
     ~/.bashrc:
-        path: '~/.dotfiles/@bash/bashrc'
+        path: '~/.dotfiles/bash/bashrc'
 
     # ##########################################################################
     # tmux configuration
     # ##########################################################################
     ~/.tmux.conf:
-        path: '~/.dotfiles/@vendor/tmux/.tmux.conf'
+        path: '~/.dotfiles/_vendor/tmux/.tmux.conf'
 
     ~/.tmux.conf.local:
-        path: '~/.dotfiles/@symlink/tmx/tmux.conf.local'
+        path: '~/.dotfiles/symlink/tmx/tmux.conf.local'
 
     # ##########################################################################
     # editor configuration
     # ##########################################################################
     ~/.vim_runtime:
-        path: '~/.dotfiles/@vendor/vim/'
+        path: '~/.dotfiles/_vendor/vim/'
 
     ~/.vim_runtime/configs.vim:
-        path: '~/.dotfiles/@symlink/vim/configs.vim'
+        path: '~/.dotfiles/symlink/vim/configs.vim'
 
     ~/.vimrc:
-        path: '~/.dotfiles/@symlink/vim/vimrc'
+        path: '~/.dotfiles/symlink/vim/vimrc'
 

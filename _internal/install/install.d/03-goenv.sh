@@ -28,7 +28,6 @@
 # VARIABLES LOADING
 # ------------------------------------------------------------------------------
 source ${HOME}/.dotfiles/_internal/variables/variables.sh
-source ${HOME}/.zshrc
 
 # ------------------------------------------------------------------------------
 # VARIABLES
@@ -54,6 +53,7 @@ if [[ $(command -v goenv) ]]; then
     # Rehash golang versions
     # --------------------------------------------------------------------------
     goenv rehash
+    goenv global ${GO_VERSIONS[0]}
 
 fi
 

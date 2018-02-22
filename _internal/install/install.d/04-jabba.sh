@@ -28,13 +28,11 @@
 # VARIABLES LOADING
 # ------------------------------------------------------------------------------
 source ${HOME}/.dotfiles/_internal/variables/variables.sh
-source ${HOME}/.zshrc
 
 # ------------------------------------------------------------------------------
 # VARIABLES
 # ------------------------------------------------------------------------------
 
-# @const string CWD - current working directory
 # @var string[] JAVA_VERSIONS - java versions
 JAVA_VERSIONS=(1.9.0)
 
@@ -44,12 +42,16 @@ JAVA_VERSIONS=(1.9.0)
 if [[ $(command -v jabba) ]]; then
 
     # --------------------------------------------------------------------------
-    # Install Versions of Pyenv
+    # Install JAVA versions
     # --------------------------------------------------------------------------
     for version in $JAVA_VERSIONS; do
         jabba install ${version}
     done
 
+    # --------------------------------------------------------------------------
+    # Set use version
+    # --------------------------------------------------------------------------
+    jabba use ${JAVA_VERSIONS[0]}
 fi
 
 # ------------------------------------------------------------------------------

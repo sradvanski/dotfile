@@ -35,6 +35,7 @@ set -e
 # VARIABLES LOADING
 # ------------------------------------------------------------------------------
 source ${HOME}/.dotfiles/_internal/variables/variables.sh
+source ${DOT_DOTFILES}/_os/os-settings.sh
 
 # ------------------------------------------------------------------------------
 # VARIABLE DEFINITIONS

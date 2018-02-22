@@ -60,9 +60,9 @@ fi
 # SETUP
 # ==============================================================================
 
- eval $foundFonts | sudo xargs -0 -n1 -I % cp -f "%" "$fontDefaultDir/"
+eval $foundFonts | sudo xargs -0 -n1 -I % cp -f "%" "$fontDefaultDir/"
 
- if [[ $(command -v fc-cache) ]]; then
+if [[ $(command -v fc-cache) ]]; then
     echo "Resetting font cache, this may take a moment..."
     sudo fc-cache -f $fontDefaultDir
 fi

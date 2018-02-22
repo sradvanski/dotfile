@@ -43,7 +43,7 @@ source ${HOME}/.dotfiles/_internal/variables/variables.sh
 # @var string DOTBOT_DIR - source directory of dotbot
 # @var string DOTBOT_BIN - dotbot executable
 CONFIG="${DOT_DOTFILES}/_config/install.config.yaml"
-DOTBOT_DIR="${DOT_DOTFILES}/@vendor/dotbot"
+DOTBOT_DIR="${DOT_DOTFILES}/_vendor/dotbot"
 DOTBOT_BIN="${DOTBOT_DIR}/bin/dotbot"
 
 # ==============================================================================
@@ -62,7 +62,7 @@ if [[ -d ${DOTBOT_DIR} ]]; then
     # --------------------------------------------------------------------------
     # SETUP RUN
     # --------------------------------------------------------------------------
-    "$DOTBOT_BIN" -d "${DOT_DOTFILES}/@vendor/dotbot" -c "$CONFIG" "${@}"
+    "$DOTBOT_BIN" -d "${DOT_DOTFILES}/_vendor/dotbot" -c "$CONFIG" "${@}"
 
 fi
 

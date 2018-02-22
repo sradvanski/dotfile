@@ -28,7 +28,6 @@
 # VARIABLES LOADING
 # ------------------------------------------------------------------------------
 source ${HOME}/.dotfiles/_internal/variables/variables.sh
-source ${HOME}/.zshrc
 
 # ------------------------------------------------------------------------------
 # VARIABLES
@@ -36,7 +35,7 @@ source ${HOME}/.zshrc
 
 # @const string CWD - current working directory
 # @var string[] PY_VERSIONS - pythone versions
-PY_VERSIONS=(3.6.4)
+PY_VERSIONS=(3.6.4 2.7.14)
 
 # ==============================================================================
 # EXECUTION
@@ -54,6 +53,7 @@ if [[ $(command -v pyenv) ]]; then
     # Rehash Python versions
     # --------------------------------------------------------------------------
     pyenv rehash
+    pyenv global ${PY_VERSIONS[0]}
 
 fi
 

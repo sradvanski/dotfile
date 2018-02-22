@@ -28,14 +28,13 @@
 # VARIABLES LOADING
 # ------------------------------------------------------------------------------
 source ${HOME}/.dotfiles/_internal/variables/variables.sh
-source ${HOME}/.zshrc
 
 # ------------------------------------------------------------------------------
 # VARIABLES
 # ------------------------------------------------------------------------------
 
 # @var string[] NODE_VERSIONS - java versions
-NODE_VERSIONS=(v9.4.0 v7.10.1 v8.9.4)
+NODE_VERSIONS=("lts/carbon" "lts/argon" "lts/boron" "iojs")
 
 # ==============================================================================
 # EXECUTION

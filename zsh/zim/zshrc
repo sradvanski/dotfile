@@ -1,0 +1,82 @@
+# -*- mode: bash; -*-
+#
+# ==============================================================================
+#
+# Purpose:           zsh env setup
+#
+# Parameters:        (none) ;
+#                    -----------------------------------------------------------
+#                    (none) ;
+#                    -----------------------------------------------------------
+#
+# Called From:       (script) executable
+#
+# Author:            Samir Radvanski <samir.radvanski@gmail.com>
+#
+# Notes:             Configuration Script for interactive ZSH
+#
+# Revision:          Last change: 06/2017 by SR :: ZSH Config
+#
+# ==============================================================================
+
+# ==============================================================================
+# VARIABLES
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# VARIABLES LOADING
+# ------------------------------------------------------------------------------
+#source /var/env/setup/variables/vars.sh
+source ${HOME}/.dotfiles/_internal/variables/variables.sh
+
+# ------------------------------------------------------------------------------
+# EXPORTS
+# ------------------------------------------------------------------------------
+
+# @var string ZIM_HOME - ZIM framework path
+export ZIM_HOME=${ZDOTDIR:-${DOT_DOTFILES}/_vendor/zim}
+
+# ------------------------------------------------------------------------------
+# CONSTANTS
+# ------------------------------------------------------------------------------
+
+# @const string ZSH_MODULE_PATH - ZSH modules
+# @const string ZSH_CONFIG - config directory
+# @const string POWERLINK9K_INSTALLATION_PATH - powerlevel9k theme
+readonly ZSH_MODULE_PATH="${DOT_DOTFILES}/_vendor"
+readonly ZSH_CONFIG_PATH="${DOT_DOTFILES}/zsh"
+readonly POWERLINK9K_INSTALL_PATH="${DOT_DOTFILES}/_vendor/zim/modules/prompt/external-themes/powerlevel9k/powerlevel9k.zsh-theme"
+
+# ==============================================================================
+# USER CUSTOMIZATION OF MODULES
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# AUTO SUGGESTIONS
+# ------------------------------------------------------------------------------
+if [[ -s "$ZSH_CONFIG_PATH/autosuggestions/autosuggestions.sh" ]]; then
+    source "$ZSH_CONFIG_PATH/autosuggestions/autosuggestions.sh"
+fi
+
+# ------------------------------------------------------------------------------
+# POWERLEVEL9K
+# ------------------------------------------------------------------------------
+if [[ -s "$ZSH_CONFIG_PATH/powerlevel9k/powerlevel9k.sh" ]]; then
+    source "$ZSH_CONFIG_PATH/powerlevel9k/powerlevel9k.sh"
+fi
+
+# ==============================================================================
+# MODULES
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# ZIM INITIALIZE
+# ------------------------------------------------------------------------------
+[[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
+
+# ==============================================================================
+# TMUX SETUP
+# ==============================================================================
+if [[ -s "${DOT_DOTFILES}/_os/os-settings.sh" ]]; then
+    source ${DOT_DOTFILES}/_os/os-settings.sh
+fi

@@ -37,7 +37,7 @@ source ${HOME}/.dotfiles/_internal/variables/variables.sh
 # ------------------------------------------------------------------------------
 
 # @var string TMUX_CONFIG_FILE - users tmux configuration
-TMUX_CONFIG_FILE=${DOT_DOTFILES}/@vendor/tmux/.tmux.conf
+TMUX_CONFIG_FILE=${DOT_DOTFILES}/_vendor/tmux/.tmux.conf
 
 # ==============================================================================
 # EXECUTION
@@ -106,7 +106,7 @@ set-option -g @pane_resize '2'
 # ------------------------------------------------------------------------------
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-run '/home/vagrant/.dotfiles/@vendor/tpm/tpm'
+run '/home/vagrant/.dotfiles/_vendor/tpm/tpm'
 
 " >> ${TMUX_CONFIG_FILE}
 

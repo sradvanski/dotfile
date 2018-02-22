@@ -62,8 +62,6 @@ if [[ $(command -v curl) ]]; then
     curl -sL ${JABBA_INSTALL} | /bin/bash
     source ${JABBA_HOME}/jabba.sh
 
-    #chown -R ${VM_USER}:${VM_USER} ${JABBA_HOME}
-
 else
     echo "Curl not found." >&2
     exit 1

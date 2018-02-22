@@ -1,1 +1,7 @@
 libncurses5-dev
+zip
+unzip
+apt-transport-https
+lsb-release
+ca-certificates
+php5.6

@@ -43,7 +43,7 @@ source ${HOME}/.dotfiles/_internal/variables/variables.sh
 # @var string THEME_DIR - current working directory
 # @var string ZIM_EXTERNAL_THEME - external tehmes
 # @var string POWERLEVEL9K_URL - download url for powerlevel
-THEME_DIR=${DOT_DOTFILES}/@vendor/zim/modules/prompt
+THEME_DIR=${DOT_DOTFILES}/_vendor/zim/modules/prompt
 ZIM_EXTERNAL_THEME=${THEME_DIR}/external-themes/powerlevel9k
 POWERLEVEL9K_URL="https://github.com/bhilburn/powerlevel9k.git"
 

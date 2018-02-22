@@ -1,6 +1,6 @@
 # Dotfiles Configuration
 
-Based on my persnal configuration of .dotfiles used 
+Based on my persnal configuration of .otfiles used 
 to bootsrap my working environment easly,
 I have made a prot for our personal use.
 
@@ -29,10 +29,10 @@ user ALL=(ALL) NOPASSWD: ALL
 ```
 
 Once this is done we can proceed to download required files.
-<b>NOTE:</b> the directory where we are downloading sources we need to put in .dotfiles directory
+NOTE: the directory where we are downloading sources we need to put in .dotfiles directory
 We can do this by running following command.
 ```bash
-git clone --recursive --depth=1 https://github.com/sradvanski/dotphiles.git .dotfiles 
+git clone --recursive --depth=1 http://192.168.130.44/samir.radvanski/dotphiles.git .dotfiles 
 ```
 
 Once all of sources donwloaded we can ensure to add correct user into our variables settings, this can be done by adding our user into:

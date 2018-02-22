@@ -28,7 +28,6 @@
 # VARIABLES LOADING
 # ------------------------------------------------------------------------------
 source ${HOME}/.dotfiles/_internal/variables/variables.sh
-source ${HOME}/.zshrc
 
 # ------------------------------------------------------------------------------
 # VARIABLES

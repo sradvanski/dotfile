@@ -40,17 +40,28 @@ source ${HOME}/.dotfiles/_internal/variables/variables.sh
 # ------------------------------------------------------------------------------
 
 # @var string CWD - current working directory
-CWD=${DOT_DOTFILES}/_internal/helpers
+# @var string PACKAGE_INSTALL - package manager detecttion
+CWD="$(cd "$(readlink -f $(dirname "$0") )" && pwd -P)"
+PACKAGE_INSTALL=$(detectPackageManager)
 
 # ==============================================================================
 # EXECUTION
 # ==============================================================================
-case ${OS_NAME} in
-    "centos")
-        echo "Cent OS" ;;
-    "")
-        echo "Debian" ;;
+case ${PACKAGE_INSTALL} in
+
+    "centos" )
+        [[ -s ${CWD}/Centosfile ]] && sudo yum install $(< ${CWD}/Centosfile)
+    ;;
+
+    "debian" )
+        [[ -s ${CWD}/Debianfile ]] && \
+            sudo apt-get -y --no-install-recommends install $(< ${CWD}/Debianfile)
+    ;;
+
     *)
-        echo "Package manager not found..."
+        echo "No packages were installed."
+        exit 0
+        ;;
+
 esac
 

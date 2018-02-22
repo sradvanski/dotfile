@@ -28,7 +28,6 @@
 # VARIABLES LOADING
 # ------------------------------------------------------------------------------
 source ${HOME}/.dotfiles/_internal/variables/variables.sh
-source ${HOME}/.zshrc
 
 # ------------------------------------------------------------------------------
 # VARIABLES
@@ -54,6 +53,7 @@ if [[ $(command -v rbenv) ]]; then
     # Rehash ruby versions
     # --------------------------------------------------------------------------
     rbenv rehash
+    rbenv global ${RB_VERSIONS[0]}
 
 fi
 

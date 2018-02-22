@@ -48,7 +48,6 @@ if [[ $(command -v curl) ]]; then
     export SDKMAN_DIR=${SDK_MAN_DIR}
     curl -sL ${SDK_MAN_URL} | bash
 
-    # chown -R ${DOT_USER}:${VM_USER} ${SDK_MAN_DIR}
 else
 
     echo "Ensure that CURL is present on the system" >&2
