@@ -39,18 +39,18 @@ export GOENV_ROOT="${DOT_HOME}/.goenv"
 export NVM_DIR="${DOT_HOME}/.nvm"
 export PYENV_ROOT="${DOT_HOME}/.pyenv"
 export SDKMAN_DIR="${DOT_HOME}/.sdkman"
+export ANDROID_HOME="${DOT_HOME}/.android-sdk"
 
 # ------------------------------------------------------------------------------
 # PATHMODS
 # ------------------------------------------------------------------------------
-export PATH="${DOT_HOME}/.linuxbrew/bin:${GOENV_ROOT}/bin:${GOENV_ROOT}/shims:${PYENV_ROOT}/bin:${DOT_HOME}/.rbenv/bin:${DOT_HOME}/.rbenv/shims:$PATH"
+export PATH="${DOT_HOME}/.linuxbrew/bin:${GOENV_ROOT}/bin:${GOENV_ROOT}/shims:${PYENV_ROOT}/bin:${DOT_HOME}/.rbenv/bin:${DOT_HOME}/.rbenv/shims:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools:$PATH"
 
 # ensure that we set bre man path
 if [[ $(command -v brew) ]]; then
     export MANPATH="$(brew --prefix)/share/man:$MANPATH"
     export INFOPATH="$(brew --prefix)/share/info:$INFOPATH"
 fi
-
 
 # ==============================================================================
 # ENVIRONMENT

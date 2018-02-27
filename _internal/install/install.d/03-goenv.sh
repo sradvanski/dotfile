@@ -37,6 +37,12 @@ source ${HOME}/.dotfiles/_internal/variables/variables.sh
 # @var string[] GO_VERSIONS - golang versions
 GO_VERSIONS=(1.9.3)
 
+# ------------------------------------------------------------------------------
+# VARIABLES
+# ------------------------------------------------------------------------------
+export GOENV_ROOT="${DOT_HOME}/.goenv"
+export PATH="${GOENV_ROOT}/bin:${GOENV_ROOT}/shims:$PATH"
+
 # ==============================================================================
 # EXECUTION
 # ==============================================================================
@@ -53,7 +59,7 @@ if [[ $(command -v goenv) ]]; then
     # Rehash golang versions
     # --------------------------------------------------------------------------
     goenv rehash
-    goenv global ${GO_VERSIONS[0]}
+    goenv global 1.9.3
 
 fi
 

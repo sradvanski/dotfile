@@ -30,12 +30,23 @@
 source ${HOME}/.dotfiles/_internal/variables/variables.sh
 
 # ------------------------------------------------------------------------------
-# VARIABLES
+# VARIABLES DEFINITIONS
 # ------------------------------------------------------------------------------
 
-# @const string CWD - current working directory
 # @var string[] RB_VERSIONS - rruby versions
 RB_VERSIONS=(2.5.0)
+
+# ------------------------------------------------------------------------------
+# PATH CONFIGURATION
+# ------------------------------------------------------------------------------
+export PATH="${DOT_HOME}/.rbenv/bin:${DOT_HOME}/.rbenv/shims:$PATH"
+
+# ==============================================================================
+# RBENV SETUP
+# ==============================================================================
+if [[ $(command -v rbenv) ]]; then
+    eval "$(rbenv init -)"
+fi
 
 # ==============================================================================
 # EXECUTION
@@ -53,7 +64,7 @@ if [[ $(command -v rbenv) ]]; then
     # Rehash ruby versions
     # --------------------------------------------------------------------------
     rbenv rehash
-    rbenv global ${RB_VERSIONS[0]}
+    rbenv global 2.5.0
 
 fi
 

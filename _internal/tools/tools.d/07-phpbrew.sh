@@ -53,6 +53,13 @@ if [[ $(command -v curl) ]]; then
     sudo mv phpbrew ${PHPBREW_DIR}
     sudo chmod +x ${PHPBREW_DIR}/phpbrew
 
+    # --------------------------------------------------------------------------
+    # INSTALL PHPBREW
+    # --------------------------------------------------------------------------
+    if [[ $(command -v phpbrew) ]]; then
+        phpbrew init
+    fi
+
 else
 
     # --------------------------------------------------------------------------

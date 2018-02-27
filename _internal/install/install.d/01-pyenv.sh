@@ -33,9 +33,21 @@ source ${HOME}/.dotfiles/_internal/variables/variables.sh
 # VARIABLES
 # ------------------------------------------------------------------------------
 
-# @const string CWD - current working directory
 # @var string[] PY_VERSIONS - pythone versions
 PY_VERSIONS=(3.6.4 2.7.14)
+
+# ------------------------------------------------------------------------------
+# VARIABLES EXPORTS
+# ------------------------------------------------------------------------------
+export PYENV_ROOT="${DOT_HOME}/.pyenv"
+export PATH="${PYENV_ROOT}/bin:$PATH"
+
+# --------------------------------------------------------------------------
+# PYENV INIT
+# --------------------------------------------------------------------------
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
 
 # ==============================================================================
 # EXECUTION
@@ -53,7 +65,7 @@ if [[ $(command -v pyenv) ]]; then
     # Rehash Python versions
     # --------------------------------------------------------------------------
     pyenv rehash
-    pyenv global ${PY_VERSIONS[0]}
+    pyenv global 3.6.4
 
 fi
 

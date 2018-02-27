@@ -1,22 +1,21 @@
-#!/usr/bin/env zsh
-# -*- Mode: bash -*-
-# vi: set ft=bash :
-#
+# -*- mode: bash; -*-
 #
 # ==============================================================================
 #
-# Purpose:           Application Install
+# Purpose:           Variables Setup
 #
 # Parameters:        (none) ;
+#                    -----------------------------------------------------------
+#                    (none) ;
 #                    -----------------------------------------------------------
 #
 # Called From:       (script) sourced
 #
 # Author:            Samir Radvanski <samir.radvanski@gmail.com>
 #
-# Notes:             Script used to install all required applications
+# Notes:             Script used to expose variables to system
 #
-# Revision:          Last change: 01/2018 by SR :: Inital configuration
+# Revision:          Last change: 07/2017 by SR :: Initial variables file list
 #
 # ==============================================================================
 
@@ -30,37 +29,21 @@
 source ${HOME}/.dotfiles/_internal/variables/variables.sh
 
 # ------------------------------------------------------------------------------
-# VARIABLES
+# VARIABLES DEFINITION
 # ------------------------------------------------------------------------------
 
-# @const string CWD - current working directory
-CWD=${DOT_DOTFILES}/_internal/install/install.d/00-brew
+# @const string PATHCWD - current working directory
+CWD=${DOT_DOTFILES}/_os/unix/vars
 
 # ------------------------------------------------------------------------------
-# VARIABLES EXPORTS
+# SANITY CHECK
 # ------------------------------------------------------------------------------
-export PATH="${DOT_HOME}/.linuxbrew/bin:$PATH"
-
-# ==============================================================================
-# EXECUTION
-# ==============================================================================
-if [[ $(command -v brew) ]]; then
-
-    # --------------------------------------------------------------------------
-    # CHECK IS ALLWORKING CORRECTLY
-    # --------------------------------------------------------------------------
-    brew doctor
-
-    # --------------------------------------------------------------------------
-    # BREW INSTALL
-    # --------------------------------------------------------------------------
-    if [[ -s "${CWD}/Brewfile" ]]; then
-        brew install $(< ${CWD}/Brewfile)
-    fi
-
-fi
+for variable in ${CWD}/vars.d/*; do
+    source $variable
+done
 
 # ------------------------------------------------------------------------------
-# CONFIGURE VM
+# VARIABLES UNLOADING
 # ------------------------------------------------------------------------------
+unset variabl
 unset CWD

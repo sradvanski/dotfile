@@ -39,6 +39,7 @@ source ${HOME}/.dotfiles/_internal/variables/variables.sh
 CWD=${DOT_DOTFILES}/_os/unix
 UNIX_BIN_PATH="${CWD}/bin/bin.sh"
 UNIX_ALIAS_PATH="${CWD}/alias/alias.sh"
+UNIX_VARS_PATH="${CWD}/vars/vars.sh"
 
 # ==============================================================================
 # LOAD
@@ -55,9 +56,14 @@ if [[ -s ${UNIX_ALIAS_PATH} ]]; then
     source ${UNIX_ALIAS_PATH}
 fi
 
+if [[ -s ${UNIX_VARS_PATH} ]]; then
+    source ${UNIX_VARS_PATH}
+fi
+
 # ------------------------------------------------------------------------------
 # PATH CONFIGURATION
 # ------------------------------------------------------------------------------
 unset CWD
 unset UNIX_BIN_PATH
 unset UNIX_ALIAS_PATH
+unset UNIX_VARS_PATH

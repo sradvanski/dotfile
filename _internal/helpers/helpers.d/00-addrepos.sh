@@ -85,7 +85,7 @@ setupDebianRepos () {
         for key in "${!repos[@]}"; do
 
             # ensure that we add gpg key
-            curl  "${repos[$key]}/${key}" | sudo apt-key add -
+            curl  "${repos[$key]}/${key}" | sudo apt-key add - &>/dev/null
 
             # add it to our stuff
             echo "deb ${repos[$key]} ${relese}  main" | \
@@ -101,6 +101,42 @@ setupDebianRepos () {
     if [[ $(command -v apt-get) ]]; then
         sudo apt-get update -y
     fi
+
+    # --------------------------------------------------------------------------
+    # CLEANUP
+    # --------------------------------------------------------------------------
+    unset sourcesList
+    unset repos
+    unset release
+}
+
+# ------------------------------------------------------------------------------
+# DEBIAN PACKAGES
+# ------------------------------------------------------------------------------
+
+# @public
+#
+# @function setupDebianRepos
+#
+# @desc method used to ensure that reposiories are
+# added to our device and that we can use them
+#
+# @param void - method doesnt take any param
+#
+# @return void - method has no return values
+setupCentOSRepos () {
+
+    # --------------------------------------------------------------------------
+    # VARIABLES
+    # --------------------------------------------------------------------------
+
+    # @var string[] repos - list of repositories
+    # @var string sourceList - directory for sources
+    declare -A repos=(
+        ["apt.gpg"]="https://packages.sury.org/php"
+    )
+    local sourcesList=/etc/apt/sources.list
+    local relese=$(lsb_release -sc)
 
     # --------------------------------------------------------------------------
     # CLEANUP
